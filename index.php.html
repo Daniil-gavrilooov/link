@@ -1,0 +1,9 @@
+<?php
+if(isset($_GET)) {
+	$link = '//'. $_SERVER["SERVER_NAME"] .'/click.php?'. http_build_query($_GET) . '&to_lander=2';
+} else {
+	$link = '//'. $_SERVER["SERVER_NAME"] . '/click.php?to_lander=2';
+}
+?>
+
+<a class="logo__link" href="<?php echo $link ?? ''; ?>"></a>
